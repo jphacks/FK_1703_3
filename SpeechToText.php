@@ -30,9 +30,9 @@ $options = [
 # Detects speech in the audio file
 $results = $speech->recognize(fopen($fileName, 'r'), $options);
 
-#foreach ($results as $result) {
-    #echo 'Transcription: ' . $result->alternatives()[0]['transcript'] . PHP_EOL;
-#}
+foreach ($results as $result) {
+    echo $result->alternatives()[0]['transcript'] . PHP_EOL;
+}
 
 # [END speech_quickstart]
-echo json_encode($results);
+#echo json_encode($results);
